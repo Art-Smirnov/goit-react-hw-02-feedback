@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const Notification = ({ message, total }) =>
   total === 0 && (
@@ -7,5 +7,10 @@ const Notification = ({ message, total }) =>
       <span>{message}</span>
     </div>
   );
+
+Notification.propTypes = {
+  message: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
+};
 
 export default Notification;
