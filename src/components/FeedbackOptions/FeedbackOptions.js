@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({ onLeaveFeedback }) => (
+const FeedbackOptions = ({ onLeaveFeedback, options }) => (
   <div className="feedbackBtns">
     <button
-      name="good"
+      name={options.GOOD}
       type="button"
       onClick={onLeaveFeedback}
       className="btn feedbackBtns__good"
@@ -12,7 +12,7 @@ const FeedbackOptions = ({ onLeaveFeedback }) => (
       Good
     </button>
     <button
-      name="neutral"
+      name={options.NEUTRAL}
       type="button"
       onClick={onLeaveFeedback}
       className="btn feedbackBtns__neutral"
@@ -20,7 +20,7 @@ const FeedbackOptions = ({ onLeaveFeedback }) => (
       Neutral
     </button>
     <button
-      name="bad"
+      name={options.BAD}
       type="button"
       onClick={onLeaveFeedback}
       className="btn feedbackBtns__bad"

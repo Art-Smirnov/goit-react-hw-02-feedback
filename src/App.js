@@ -5,6 +5,12 @@ import FeedbackOptions from './components/FeedbackOptions';
 import Section from './components/Section';
 import Notification from './components/Notification';
 
+const Options = {
+  GOOD: 'good',
+  NEUTRAL: 'neutral',
+  BAD: 'bad',
+};
+
 class App extends Component {
   static defaultProps = {
     initialValue: 0,
@@ -33,7 +39,7 @@ class App extends Component {
     return (
       <Section title="Please leave feedback">
         <FeedbackOptions
-          // options={}
+          options={Options}
           onLeaveFeedback={this.onLeaveFeedback}
         ></FeedbackOptions>
         <Statistics
