@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Notification = ({ message, total }) => (
+const Notification = ({ message }) => (
   <div>
     <span>{message}</span>
   </div>
@@ -9,7 +9,6 @@ const Notification = ({ message, total }) => (
 
 Notification.propTypes = {
   message: PropTypes.string.isRequired,
-  total: PropTypes.number.isRequired,
 };
 
 export default Notification;

@@ -16,14 +16,10 @@ class App extends Component {
     bad: this.props.initialValue,
   };
 
-  onLeaveFeedback = e => {
-    e.target.classList.value.includes('feedbackBtns__good') &&
-      this.setState(prevState => ({ good: prevState.good + 1 }));
+  onLeaveFeedback = ({ target }) => {
+    const { name } = target;
 
-    e.target.classList.value.includes('feedbackBtns__neutral') &&
-      this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
-    e.target.classList.value.includes('feedbackBtns__bad') &&
-      this.setState(prevState => ({ bad: prevState.bad + 1 }));
+    this.setState(prevState => ({ [name]: prevState[name] + 1 }));
   };
 
   render() {
