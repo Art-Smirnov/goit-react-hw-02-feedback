@@ -5,12 +5,6 @@ import FeedbackOptions from './components/FeedbackOptions';
 import Section from './components/Section';
 import Notification from './components/Notification';
 
-const Options = {
-  GOOD: 'good',
-  NEUTRAL: 'neutral',
-  BAD: 'bad',
-};
-
 class App extends Component {
   static defaultProps = {
     initialValue: 0,
@@ -22,10 +16,8 @@ class App extends Component {
     bad: this.props.initialValue,
   };
 
-  onLeaveFeedback = ({ target }) => {
-    const { name } = target;
-
-    this.setState(prevState => ({ [name]: prevState[name] + 1 }));
+  onLeaveFeedback = option => {
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
   };
 
   render() {
@@ -39,7 +31,7 @@ class App extends Component {
     return (
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={Options}
+          options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.onLeaveFeedback}
         ></FeedbackOptions>
         <Statistics
