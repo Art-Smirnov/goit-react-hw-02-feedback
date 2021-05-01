@@ -1,0 +1,26 @@
+/* @value blue from '../../vars.module.css' */
+
+/* узнать чого не працюэ замоментчене*/
+.feedbackBtns {
+  display: flex;
+  margin: -10px;
+  margin-bottom: 20px;
+}
+.btn {
+  /* composes: button; */
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 3px 12px;
+  border-radius: 4px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  margin: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #00007e;
+}
