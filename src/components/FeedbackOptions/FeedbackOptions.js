@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import styles from './FeedbackOptions.module.css';
 
-console.log(styles);
-
 const FeedbackOptions = ({ onLeaveFeedback, options }) => (
   <div className={styles.feedbackBtns}>
     {options.map(option => (

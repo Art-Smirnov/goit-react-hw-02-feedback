@@ -33,7 +33,7 @@ class App extends Component {
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.onLeaveFeedback}
-        ></FeedbackOptions>
+        />
         <Statistics
           good={good}
           neutral={neutral}
